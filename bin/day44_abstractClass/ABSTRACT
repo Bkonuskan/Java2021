@@ -1,0 +1,31 @@
+ABSTRACT CLASS
+
+1)Parent class taki body siz methodlara abstract methodlar denir.
+Bazı child parent ilişkisinde ki classlarda child class parent class in
+bazı methodlarını kullanmak zorunda kalır ve o methodlar abstrack hale getirilir.
+
+ABSTRACT CLASS LARDA OBJ ASLA CREAT EDİLEMEZ....
+
+2) Bir method u abstrackt yapmak için..
+   a)Body silinir
+   b)Axess modifire dan sonra "Abstract" keyword kullanılır.(Önce de olabilir)
+   
+3) Abstract method ancak Abstractbir class ta cread edilebilir.
+Concread class ta asla Abstract method cread edilemez
+
+4)Abstract bir class ta hem Abstract hemde concreat method olur.
+5)Concread class Abstract class a extend edildiğinde Abstract class taki tüm
+method ları implement(uyarlama ) ZORUNDADIR.Ama cread methodları implement edilmeye bilir
+
+
+7) Final, Private ve Static methodlar abstract O_L_A_M_A_Z
+8) Abstract bir class ta Concread veriable olabilir. Ama bu ASLA Abstract o-l-a-m-a-z.....
+
+Mekanım la mekan oldu, Bu cismim cümle can oldu.
+Nazar-ı hakk ayan oldu .Özüm mest-i Lika gördüm!.
+
+
+
+
+
+  

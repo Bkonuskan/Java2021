@@ -1,0 +1,14 @@
+EXCEPTIONS   --->
+1)iki tur exceptions vardir.
+i) Compile Time (checked) Exceptions: kod creat edilirken java'nin ongordugu olasi sorunlara karsi hatanin altinin cizilmesi.
+Ama  her alti kirimizi cizilen kod exceptions degildir.
+ii) Run Time (unchecked) Exceptions: Kod run edildiginde olusan exceptions'dur.
+2) Code creat edilirkenException kullanilmasi gerekirse:
+            
+            a--> Add throws declarations :Hata olustugunda concol'a hata ile ilgili mesaj verir
+            b-->try-catch block :Hata olustugunda  hata'nin yazdirilmasi ve handle edilmesini saglar
+            
+3) try  block'tan sonra en az bir tane catch block olamli aksi durumda CTE verir...!!!!!
+4) try-catch block'ta try body hatasiz calisirsa catch body calistirilmaz. catch body try body'deki exceptions'da calisir.
+5) try  body'den sonra 1 den fazla catch body creat edilebilir. Olusan exceptions hangi catch ile ilgili ise o catch body calisir.
+Ayni anda saece tek catch body calisir.
