@@ -1,0 +1,63 @@
+
+INTERFACE....
+
+   INTERFACE ASLA BIR CLASS DEGILDIR. INTERFACE INTERFACE'dir.
+			
+1) Interface yapilarda concrete method asla creat! edilemez. sadece  abstract method'lar creat edilir.
+
+2) Java multiple inheritance desteklemez . Ancak interface parent'ler multiple inheritance'i destekler
+
+3) Birden fazla parent class'larda ayni isimli methodlarin olmasi durumunda child class ayni isimli 
+   farkli bodyli methodlar icin secim yapamaz. fakat Interface'lerde methodlarin bodyleri olmadigindan 
+   ayni isimli methodlar birbiriyle tamamen ayni oldugu icin secim soz konusu olmaz ve child class parent 
+   inteface'den ayni isimli methodlardan birini override ederek bu sorun cozulur
+
+   Ahan da trick : Parent Interface'lerde ayni isimli fakat farkli return type'li methodlar child class'ta CTE verir.
+
+4) Interface yapilarda tum methodlar abstract olmak zorunda oldugundan method signiture 
+   "abstract" keywordu ve public access modifier yazilmayabilir.
+ 
+ 
+   public abstract void koltuk(); --> abstract method abstract keyword kullanilmis
+   public void ayna();            --> abstract method abstract keyword kullanilmamis
+ 
+5) Interface'lerdeki tum member'lar public oldugu icin  AccesModifier  yazilmasa da public ile ayni islemi yapar.
+   public void ayna(); <-->  void ayna(); ---> ayni islemi yaparlar.
+ 
+   Trick :  normal class'larda AccMod yazilmazsa default olur.Ancak Interface'lerde AccMod yazilmazsa public olur
+ 
+6) Interface'ler kendi arasinda parent child (extends) iliskisi kurabilir.
+   Interface'leri bir class'a parent yapmak icin "implements" keywordu kullanilir. 
+   Class'lari bir class'a parent yapmak icin "extends" keywordu kullanilir. 
+ 
+   class --> class  : extends
+   interface --> interface  : extends
+   class --> interface  : implements
+   interface --> class  :O-LA-MAZZZ.. interface'in parent'i class olamaz..
+ 
+ 7) Interface'lerde veriable'lar mutlaka final'dir.
+ 	a)Final veriable'ler italik bold'dur ve buyuk harf ile yazilmali
+ 	b)Final veriable'ler initialize edilmezse CTE verir.
+ 	
+ 8) Interface'lerde veriable'lar mutlaka static'dir. Dolayisiyle obj creat etmeden interface ismi ile ulasilabilir.
+ 
+ 9) *****Interface'lerde tum member'lar public'tir.
+    Dolayisiyle tum interface veriable'leri -->public+static+final (yazsa da yazmasa da )
+ 
+    HANÝMÝS TRÝCK :
+    Ayni isimli ve ayni data type'li variable'lar parent interface'lerde creat edip  object kullanarak call edilirse
+    Java hangisini sececegine karar veremez ve CTE verir. CTE almamak icin ayni isimli variable'lar kesinlikle "interface"
+    isimleri kullanarak call edilmelidir.
+		
+    System.out.println(S1.RENK);-->CTE verir
+		
+ 10)Interface yapilarda istenirse abstract olmayan concrete method creat edilebilir.
+  a) AccMod'den sonra "default" veya "static" keyword kullanilmali.
+  b)Interface yapilarda concrete method icin kullanilan "default" keyword'u kesinlikle asla AccMod turunu vermez .
+  c)Interface yapilarda concrete method child class tarafindan override edilmek zorunda degildir.	
+  d)Interface yapilarda "default" olarak creat edilen concrete method child class'a ancak obj ile call edilir.
+  e)Interface yapilarda "static" olarak creat edilen concrete method child class'a ancak Datatype(interface name) ile call edilir.
+ 
+ 
+ 
+ 
